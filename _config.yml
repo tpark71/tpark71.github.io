@@ -2,7 +2,7 @@ title:              TJ's Note
 email:              taejoon.park@gatech.edu
 description:        TJ's Study Note
 author:             Start Bootstrap
-baseurl:            ""
+# baseurl:            ""
 url:                "https://tpark71.github.io"
 
 # Social Profiles
