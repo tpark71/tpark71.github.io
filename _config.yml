@@ -1,23 +1,23 @@
 title:              TJ's Note
 email:              taejoon.park@gatech.edu
 description:        TJ's Study Note
-author:             Start Bootstrap
+author:             Taejoon Park
 baseurl:            ""
 url:                "https://tpark71.github.io"
 
 # Social Profiles
-twitter_username:   SBootstrap
-github_username:    StartBootstrap
-facebook_username:  StartBootstrap
+twitter_username:   
+github_username:    tpark71
+facebook_username:  
 instagram_username:  
-linkedin_username:
+linkedin_username:  taejoon-park
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
 markdown:           kramdown
-permalink: /:categories/:title
+permalink:          /:categories/:title
 paginate:           5
 paginate_path:      "/posts/page:num/"
 plugins:

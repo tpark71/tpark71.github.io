@@ -22,17 +22,30 @@
           <a class="nav-link" href="{{"/contact" | relative_url }}">Contact</a>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="{{"/contact" | relative_url }}">English</a></li>
-            <li><a class="dropdown-item" href="{{"/contact" | relative_url }}">Korean</a></li>
-          </ul>
-        </li>
-
-
+        <!-- Check page.lang exists -->
+        {% if page.lang %}
+          <!-- Case 1: Only one language is available -->
+          {% if page.lang.size == 1 %}
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="{{"" | relative_url }}" disabled>{{page.lang[0]}}</a>
+            </li> -->
+          <!-- Case 2: Multiple languages are available -->
+          {% elsif page.lang.size > 1 %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{page.lang[0]}}</a>
+                {% assign splitUrl = page.url | split: '/' %}
+                {% if splitUrl[1] == 'en' %}
+                  {% assign changeLangUrl = 'ko' | append: '/' | append: splitUrl[2] | append: '/' | append: splitUrl[3] %}
+                {% else %}
+                  {% assign changeLangUrl = 'en' | append: '/' | append: splitUrl[2] | append: '/' | append: splitUrl[3] %}
+                {% endif %}
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="{{changeLangUrl | relative_url }}">{{page.lang[1]}}</a></li>
+                </ul>
+            </li>
+          {% endif %}
+        {% endif %}
       </ul>
     </div>
   </div>
