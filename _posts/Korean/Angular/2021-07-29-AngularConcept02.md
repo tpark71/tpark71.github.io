@@ -31,6 +31,12 @@ Components 이란 템플렛 뷰 (html과 css)와 비지니스 로직 (TypeScript
 $ ng new componentDemo
 ~~~~
 
+![image](https://user-images.githubusercontent.com/44415731/127566380-1daac241-b8fd-4998-bebc-8207a12c2080.png){: .align-center}
+y를 입력하려 routing를 만들도록 하겠습니다. 오늘 데모에서는 필요없지만 나중에 routing에 대해서 노트를 쓸 때 정리하도록 하겠습니다.
+
+![image](https://user-images.githubusercontent.com/44415731/127567190-afec7ad3-3c57-4cb0-b8e6-de2ca36704a5.png){: .align-center}
+CSS를 선택하고 엔터를 하겠습니다.
+
 그 다음 방금 만든 프로젝트의 app 디렉토리로 들어가서 my-first-component 만들도록 하겠습니다.
 ~~~~
 $ cd ./componentDemo/src/app
@@ -42,4 +48,10 @@ Note:
 # Component 만들때 단축 된 커멘드
 $ ng g c my-first-component
 ~~~~
+
+그럼 이렇게 4개의 파일들을 만들고 1개의 파일을 업데이트 했다고 알려줍니다.
+![image](https://user-images.githubusercontent.com/44415731/127567976-706cb96f-89b6-4577-b6f1-7eec5859c333.png){: .align-center}
+
+만들어진 4개의 파일은 새로운 component의 파트, 업데이트 된 1개의 파일은 app.moudle.ts에 새로운 component가 import 된 것을 알려준 것 입니다.
+![image](https://user-images.githubusercontent.com/44415731/127569468-d28cc7e1-c714-4dbc-a342-b79379f31957.png){: .align-center}
 
