@@ -25,6 +25,7 @@ Components 이란 템플렛 뷰 (html과 css)와 비지니스 로직 (TypeScript
 2. 스크린을 파트 별로 나누기 좋다
 3. 병합하기 편리하다
 4. Component를 새로 만들거나 업데이트하기 쉽다
+<br>
 
 ## 코드 예시
 ***
@@ -33,6 +34,8 @@ Components 이란 템플렛 뷰 (html과 css)와 비지니스 로직 (TypeScript
 $ ng new componentDemo
 ~~~~
 <br>
+
+그러면 이렇게 나올텐데요  
 
 ![image](https://user-images.githubusercontent.com/44415731/127566380-1daac241-b8fd-4998-bebc-8207a12c2080.png){: width="100%" height="100%"}{: .align-center}  
 
@@ -52,7 +55,9 @@ $ ng generate component my-first-component
 <br>
 
 ***Note: Component 만들때 단축 된 커멘드***
+~~~~
     $ ng g c my-first-component
+~~~~
 <br>
 
 ![image](https://user-images.githubusercontent.com/44415731/127567976-706cb96f-89b6-4577-b6f1-7eec5859c333.png){: width="50%" height="50%"}{: .align-center}  
