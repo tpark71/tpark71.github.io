@@ -1,5 +1,13 @@
 // Custom color variables
 
 $teal: #0085A1;
+$light_gray: #f6f8fa;
+$light_purple: #e6ccff;
 
-$primary: $teal;
+$primary: $light_purple;
+
+// Code Block
+$code_block_background: $light_gray;
+$code_block_text: #000000;
+
+$step_color: $light_purple;

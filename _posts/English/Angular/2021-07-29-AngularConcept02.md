@@ -2,7 +2,7 @@
 layout: post
 title: "[Angular Concept 02] Angular Components"
 subtitle: "Nothing to see here! This is for testing purposes!"
-date: 2021-07-27
+date: 2021-07-29
 background: '/img/posts/03.jpg'
 categories:
 - en
