@@ -31,9 +31,9 @@ kbd {
 pre {
   display: block;
   @include font-size($code-font-size);
-  // color: $pre-color;
-  color: $code_block_text;
-  background: $code_block_background;
+  color: $pre-color;
+  // color: $code_block_text;
+  // background: $code_block_background;
   padding: 16px;
   border-radius: 10px;
 
@@ -42,15 +42,28 @@ pre {
   //   @include font-size(inherit);
   //   color: inherit;
   //   word-break: normal;
-  //   background-color: black;
+  // }
+  // code {
+  //   @include font-size(inherit);
+  //   word-break: normal;
+  //   padding-top: 0.1rem;
+  //   padding-bottom: 0.1rem;
+  //   display: block;
+  //   background: $code_block_background;
+  //   white-space: pre;
+  //   -webkit-overflow-scrolling: touch;
+  //   overflow-x: scroll;
+  //   max-width: 100%;
+  //   min-width: 100px;
+  //   // padding: 0;
   // }
   code {
     @include font-size(inherit);
+    color: inherit;
     word-break: normal;
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
     display: block;
-    background: $code_block_background;
     white-space: pre;
     -webkit-overflow-scrolling: touch;
     overflow-x: scroll;
