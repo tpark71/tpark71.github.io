@@ -104,7 +104,7 @@ Goal: 4 종류의 데이터 바이딩 만들어 보자!
 
 <h6>Step 2:</h6>
 ~~~~
-\<input [type]="attr" value="Click Me"/>
+<input [type]="attr" value="Click Me"/>
 ~~~~
 - Component의 html 파일을 연다 (src > app > my-first-component > my-first-component.component.html)
 - 위의 코드를 html 파일에 넣는다.  
@@ -131,7 +131,7 @@ Goal: 4 종류의 데이터 바이딩 만들어 보자!
 
 <h6>Step 2:</h6>
 ~~~~
-/<input type="button" value="Click Me" (click)="onClick()"/>
+<input type="button" value="Click Me" (click)="onClick()"/>
 ~~~~
 - Component의 html 파일을 연다 (src > app > my-first-component > my-first-component.component.html)
 - 위의 코드를 html 파일에 넣는다.  
@@ -165,10 +165,10 @@ Goal: 4 종류의 데이터 바이딩 만들어 보자!
 <br>
 
 <h6>Step 3:</h6>
-~~~~
-/<p>{{data}}</p>
-/<input type="text" [(ngModel)]="data" />
-~~~~
+```
+<p>{% raw %}{{ data }}{% endraw %}</p>
+<input type="text" [(ngModel)]="data" />
+```
 - Component의 html 파일을 연다 (src > app > my-first-component > my-first-component.component.html)
 - 위의 코드를 html 파일에 넣는다.  
 <br>
