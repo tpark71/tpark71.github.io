@@ -12,11 +12,13 @@ lang:
 ---
 
 ## Data Binding 이란
+***
 - 데이터 바이딩이란 Typescript에 있는 비지니스 로직과 HTML 템플릿에 있는 Component들의 데이터들을 연결시켜주는 것 입니다.
 - 만약 영화 데이터베이스 웹사이트라면, Typescript가 영화들을 Data Binding를 통해 HTML 템플릿 위에 영화들 그립니다.
 <br>
 
 ## Data Binding 종류 (2가지)
+***
 - One-Way Binding
   - 데이터를 한쪽으로만 전해줍니다.
   - Typescript -> HTML or HTML -> Typescript
@@ -25,6 +27,7 @@ lang:
   - Typescript <-> HTML
 
 ## Data Binding 하는 법 (4가지)
+***
 <table>
     <th>
         <td>종류</td>
@@ -103,7 +106,7 @@ Goal: 4 종류의 데이터 바이딩 만들어 보자!
 <br>
 
 <h6>Step 2:</h6>
-~~~~
+~~~~html
 <input [type]="attr" value="Click Me"/>
 ~~~~
 - Component의 html 파일을 연다 (src > app > my-first-component > my-first-component.component.html)
@@ -130,7 +133,7 @@ Goal: 4 종류의 데이터 바이딩 만들어 보자!
 <br>
 
 <h6>Step 2:</h6>
-~~~~
+~~~~html
 <input type="button" value="Click Me" (click)="onClick()"/>
 ~~~~
 - Component의 html 파일을 연다 (src > app > my-first-component > my-first-component.component.html)
@@ -165,7 +168,7 @@ Goal: 4 종류의 데이터 바이딩 만들어 보자!
 <br>
 
 <h6>Step 3:</h6>
-```
+```html
 <p>{% raw %}{{ data }}{% endraw %}</p>
 <input type="text" [(ngModel)]="data" />
 ```
