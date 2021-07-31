@@ -15,6 +15,7 @@ lang:
 ***
 - 데이터 바이딩이란 Typescript에 있는 비지니스 로직과 HTML 템플릿에 있는 Component들의 데이터들을 연결시켜주는 것 입니다.
 - 만약 영화 데이터베이스 웹사이트라면, Typescript가 영화들을 Data Binding를 통해 HTML 템플릿 위에 영화들 그립니다.
+
 <br>
 
 ## Data Binding 종류 (2가지)
@@ -25,6 +26,8 @@ lang:
 - Two-way Binding
   - 데이터를 쌍방향으로 교환하여 HTML과 Typescript의 데이터들이 언제나 연동됩니다.
   - Typescript <-> HTML
+
+<br>
 
 ## Data Binding 하는 법 (4가지)
 ***
@@ -60,12 +63,14 @@ lang:
         <td>DOM과 Component의 데이터가 연동 되어야 할때 사용</td>
     </tr>
 </table>
+
 <br>
 
 ## 코드 예시
 ***
 Goal: 4 종류의 데이터 바이딩 만들어 보자!  
 (저번에 만든 component 사용하자!)
+
 <br>
 
 ### String Interpolation
