@@ -30,35 +30,34 @@ lang:
 <br>
 
 ## Data Binding 하는 법 (4가지)
-***
-<table>
-    <th>
-        <td>종류</td>
-        <td>Syntax</td>
-        <td>데이터 이동 방향</td>
-        <td></td>
-    </th>
+<table class="table">
     <tr>
-        <td>String Interpolation</td>
-        <td>{{ data }}</td>
+        <th scope="col"></th>
+        <th scope="col">Syntax</th>
+        <th scope="col">데이터 이동 방향</th>
+        <th scope="col"></th>
+    </tr>
+    <tr>
+        <th scope="row">String Interpolation</th>
+        <td><code>{% raw %}{{ data }}{% endraw %}</code></td>
         <td>Component -> DOM</td>
         <td>간단한 String를 보낼 때 사용</td>
     </tr>
     <tr>
-        <td>Property Binding</td>
-        <td>[property] = "data"</td>
+        <th scope="row">Property Binding</th>
+        <td><code>[property] = "data"</code></td>
         <td>Component -> DOM</td>
         <td>HTML의 인라인 속성 바꿀 때 사용</td>
     </tr>
     <tr>
-        <td>Event Binding</td>
-        <td>(event) = "function()"</td>
+         <th scope="row">Event Binding</th>
+        <td><code>(event) = "function()"</code></td>
         <td>DOM -> Component</td>
         <td>HTML의 event 발생시 발동하는 function를 할당 할때 사용</td>
     </tr>
     <tr>
-        <td>2-Way Data Binding</td>
-        <td>[(ngModel)}</td>
+        <th scope="row">2-Way Data Binding</th>
+        <td><code>[(ngModel)}</code></td>
         <td>DOM <-> Component</td>
         <td>DOM과 Component의 데이터가 연동 되어야 할때 사용</td>
     </tr>
@@ -149,8 +148,9 @@ Goal: 4 종류의 데이터 바이딩 만들어 보자!
 
 ![image](https://user-images.githubusercontent.com/44415731/127726736-32be39a6-d12a-4bd5-a38c-820cfb2efbf1.png){: width="100%" height="100%"}{: .align-center}  
 - Terminal에서 <code>ng serve</code>를 이용하여 브라우저에서 결과를 확인한다.
-- 만약 Click Me 버튼을 누렀을 때 "button clicked!라고 뜬다면 성공!
-<br>
+- 만약 Click Me 버튼을 누렀을 때 "button clicked!라고 뜬다면 성공!  
+<br>  
+
 
 ### 2-Way Data Binding
 ***
