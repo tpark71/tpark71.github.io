@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[Angular 06] Angular Directives (Part 2)"
-subtitle: "Angular Component Directives 노트와 Structural Directives Examples"
+title: "Angular Directives (Part 2)"
+subtitle: "[Angular 06] Angular Component Directives 노트와 Structural Directives Examples"
 date: 2021-08-02
 # background: '/img/posts/03.jpg'
 categories:
