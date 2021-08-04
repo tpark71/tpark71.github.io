@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Angular Concept 04] Angular Component Interaction"
+title: "[Angular 04] Angular Component Interaction"
 subtitle: "Angular Component Interaction 노트"
 date: 2021-07-31
 # background: '/img/posts/03.jpg'

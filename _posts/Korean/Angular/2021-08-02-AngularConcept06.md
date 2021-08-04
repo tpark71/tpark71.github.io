@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Angular Concept 06] Angular Directives (Part 2)"
+title: "[Angular 06] Angular Directives (Part 2)"
 subtitle: "Angular Component Directives 노트와 Structural Directives Examples"
 date: 2021-08-02
 # background: '/img/posts/03.jpg'
@@ -14,8 +14,8 @@ lang:
 ## Intro
 ***
 - Attribute Directives 예시
-  - [ngClass]: add or remove css class
-  - [ngStyle]: styles html element
+  - \[ngClass\]: add or remove css class
+  - \[ngStyle\]: styles html element
 
 <br>
 
@@ -30,6 +30,7 @@ Goal: [ngClass], [ngStyle] 사용해 보자!
 ***
 <h6>Step 1:</h6>
 
+<div class="code-header">src > app > my-first-component > my-first-component.component.ts</div>
 ~~~~typescript
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
@@ -135,7 +136,7 @@ export class MyFirstComponentComponent implements OnInit {
 
 <h6>Result</h6>
 
-![image](https://user-images.githubusercontent.com/44415731/127756575-a61253c9-26ba-4456-9054-ddbdb422855e.png){: width="100%" height="100%"}{: .align-center}  
+![image](https://user-images.githubusercontent.com/44415731/128107109-4cf9ae49-e27f-4e1f-9f73-6b0959479140.png){: width="100%" height="100%"}{: .align-center}  
 - Terminal에서 <code>ng serve</code>를 이용하여 브라우저에서 결과를 확인한다.
 - '+' 누르면 커지고 '-' 누르면 작아진다면 성공!
 <br>  

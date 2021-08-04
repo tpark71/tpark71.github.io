@@ -18,6 +18,10 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 # Build settings
 markdown: kramdown
 highlighter: rouge
+# kramdown:
+#     syntax_highlighter_opts:
+#         block:
+#             line_numbers: true
 
 permalink:          /:categories/:title
 paginate:           5

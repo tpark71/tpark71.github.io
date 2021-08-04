@@ -25,19 +25,43 @@ lang:
         <th scope="col">Description</th>
     </tr>
     <tr>
-        <th scope="row">trigger</th>
+        <th scope="row"><code>trigger()</code></th>
+        <td>애니메이션을 시작하고 다른 애니메이션 함수의 컨테이너 역활</td>
+    </tr>
+    <tr>
+        <th scope="row"><code>style()</code></th>
+        <td>CSS 스타일을 연결해줌</td>
+    </tr>
+    <tr>
+        <th scope="row"><code>state()</code></th>
+        <td>각 transition에 CSS style들을 할당해줌</td>
+    </tr>
+    <tr>
+        <th scope="row"><code>animate()</code></th>
+        <td>Transition이 일어날 타이밍</td>
+    </tr>
+    <tr>
+        <th scope="row"><code>trasition()</code></th>
+        <td>두개의 states가 어떤 움직임을 구사할지 할당해줌</td>
+    </tr>
+    <tr>
+        <th scope="row"><code>keyframes()</code></th>
+        <td>정</td>
+    </tr>
+    <tr>
+        <th scope="row"><code>group()</code></th>
         <td></td>
     </tr>
     <tr>
-        <th scope="row">String Interpolation</th>
+        <th scope="row"><code>query()</code></th>
         <td></td>
     </tr>
     <tr>
-        <th scope="row">String Interpolation</th>
+        <th scope="row"><code>sequence()</code></th>
         <td></td>
     </tr>
     <tr>
-        <th scope="row">String Interpolation</th>
+        <th scope="row"><code>stagger()</code></th>
         <td></td>
     </tr>
 </table>

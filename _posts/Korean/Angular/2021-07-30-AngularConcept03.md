@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Angular Concept 03] Angular Data Binding"
+title: "[Angular 03] Angular Data Binding"
 subtitle: "Angular Data Binding으로 개념 데이터 연동하기"
 date: 2021-07-30
 # background: '/img/posts/03.jpg'

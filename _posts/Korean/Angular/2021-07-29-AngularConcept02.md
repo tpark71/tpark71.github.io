@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Angular Concept 02] Angular Components 만들기"
+title: "[Angular 02] Angular Components"
 subtitle: "Angular Components 개념 알아보고 만들기"
 date: 2021-07-29
 # background: '/img/posts/03.jpg'

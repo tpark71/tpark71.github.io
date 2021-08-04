@@ -50,3 +50,29 @@
         }
     }
 }
+
+.code-header {
+    font-size:medium;
+    padding-left: 1rem;
+    background-color: rgb(68, 68, 68);
+    color: white;
+    font-family: inherit;
+}
+
+// pre {
+//     white-space: pre-wrap;
+//   }
+//   pre::before {
+//     counter-reset: listing;
+//   }
+//   code {
+//     counter-increment: listing;
+//   }
+//   code::before {
+//     content: counter(listing) ". ";
+//     display: inline-block;
+//     width: 8em;         /* now works */
+//     padding-left: auto; /* now works */
+//     margin-left: auto;  /* now works */
+//     text-align: right;  /* now works */
+//   }

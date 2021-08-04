@@ -57,12 +57,13 @@ pre {
   //   min-width: 100px;
   //   // padding: 0;
   // }
-  code {
+
+  code { 
     @include font-size(inherit);
     color: inherit;
     word-break: normal;
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
+    // padding-top: 0.1rem;
+    // padding-bottom: 0.1rem;
     display: block;
     white-space: pre;
     -webkit-overflow-scrolling: touch;
@@ -70,8 +71,12 @@ pre {
     max-width: 100%;
     min-width: 100px;
     // padding: 0;
+    // content: counter(listing) ". ";
+    // display: inline-block;
   }
 }
+
+
 
 // Enable scrollable blocks of code
 .pre-scrollable {
