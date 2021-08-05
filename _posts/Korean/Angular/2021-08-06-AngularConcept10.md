@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Angular Forms"
-subtitle: "[Angular Basic 09] Template-Driven and Reactive Forms"
-date: 2021-08-05
+title: "Angular Forms Validation"
+subtitle: "[Angular Basic 10] Validation for Template-Driven and Reactive Forms"
+date: 2021-08-04
 # background: '/img/posts/03.jpg'
 categories:
 - ko
@@ -11,44 +11,212 @@ lang:
 - Korean
 ---
 
-## Form
+## Validators
 ***
-- Html에서 유저가 입력한 input를 server로 받아올때 form를 사용합니다.
+- 유저가 form를 작성할 때 입력 할 수 있는 value를 제한한다
+- 예시: 유저가 email-form에 '@'이 없으면 submit를 하지 못하게 한다
 
-## Types of Angular Forms (2 types)
+## Built-In Validators
+- min(x)
+  - 입력된 value가 x 보다 높아야 한다
+- max(x)
+  - 입력된 value가 x 보다 낮아야 한다
+- required
+  - 무조건 입력해 줘야 한다
+- requiredTrue
+  - 거의 checkbox를 무조건 check 해 주어야 할때 쓴다
+- pattern
+  - 지정된 패턴으로만 입력해야 한다
+  - Ex: <code>Validators.pattern('[a-zA-Z]*')</code>
+- maxLength(x)
+  - 입력된 글자의 수가 x 보다 적어야 한다
+- minLength(x)
+  - 입력된 글자의 수가 x 보다 많아야 한다
+- email
+  - 이메일을 입력해야 할 때
 
+~~~~
+# Example in Html:
+<input type="text" ... min="15">
+# Example in TS:
+name: new FormControl('', Validators.min(15)),
+~~~~
+
+## Form Control Status (폼의 의식의 흐름)
 <table class="table">
     <tr>
-        <th scope="col"></th>
-        <th scope="col">Template-Driven Form</th>
-        <th scope="col">Reactive Form</th>
+        <th scope="col">#</th>
+        <th scope="col">Stage Name</th>
+        <th scope="col">Description</th>
     </tr>
     <tr>
-        <th scope="row">Setup</th>
-        <td>By component</td>
-        <td>By directives</td>
+        <th scope="row">1</th>
+        <td>Value</td>
+        <td>
+        input box에 value가 있으면 value를 알려주고, 없으면 null를 리턴하다
+        </td>
     </tr>
     <tr>
-        <th scope="row">Data Model</th>
-        <td>Structured</td>
-        <td>Unstructed</td>
+        <th scope="row">2</th>
+        <td>Status</td>
+        <td>
+          Validation의 현 상태를 5가지로 분류해 알려준다:
+          <br>
+          <ol>
+            <li>valid: validation를 전부 다 통과 했을 때</li>
+            <li>invalid: validation를 하나라고 통과하지 못 했을 때</li>
+            <li>pending: 아직 control이 validation를 확인 중 일 때</li>
+            <li>disabled: UI에서 비활성화 되었기 때문에 validation 확인을 할 필요가 없을때</li>
+            <li>enabled: UI에서 활성화 되어있을 때</li>
+          </ol>
+        </td>
+    </tr><tr>
+        <th scope="row">3</th>
+        <td>Error</td>
+        <td>
+          해당 필드가 에러가 있다고 알려줌
+          <br>
+          ex: <code>username.errors.minlength</code>
+        </td>
+    </tr><tr>
+        <th scope="row">4</th>
+        <td>Pristine</td>
+        <td>만약 유저가 UI있는 value를 바꾸지 않았을 때</td>
+    </tr><tr>
+        <th scope="row">5</th>
+        <td>Dirty</td>
+        <td>만약 유저가 UI있는 value를 바꿨을 때 (Pristine과 반대)</td>
+    </tr><tr>
+        <th scope="row">6</th>
+        <td>Touched</td>
+        <td>유저가 필드에 마우스를 클릭했다가 아무것도 하지 않고 마우스로 다른 곳을 클릭할 경우</td>
+    </tr><tr>
+        <th scope="row">7</th>
+        <td>Untouched</td>
+        <td>유저가 아직 필드를 건드리지 않았을 경우 (유저가 마우스로 필드를 클릭하고 가만히 있으면 아직 untouched 상태)</td>
     </tr>
     <tr>
-         <th scope="row">Predictability</th>
-        <td>Synchronous</td>
-        <td>Asychronous</td>
+        <th scope="row">8</th>
+        <td>valueChanges, statusChanges</td>
+        <td>
+          value가 바뀌면 또는 status가 바뀌면 알려주는 Observable를 리턴함
+          <br>
+          ex1: <code>this.loginForm.get("username").valueChanges.subscribe(
+            username => {
+              console.log("Changed Username:" + username);
+            })</code>
+        </td>
     </tr>
     <tr>
-        <th scope="row">Form Validation</th>
-        <td>Functions</td>
-        <td>Directives</td>
-    </tr>
-    <tr>
-        <th scope="row">Mutability</th>
-        <td>Immutable</td>
-        <td>Mutable</td>
+        <th scope="row">9</th>
+        <td>updateOn</td>
+        <td>
+          validation 확인을 언제 해야하는지 지정해줌 
+          <ul>
+            <li>change(this is default): 유저가 value를 바꿨을 때</li>
+            <li>blur: 확인을 유저가 포커스를 잃었을 때 하기</li>
+            <li>submit: 확인을 유저가 submit 했을 때 하기</li>
+          </ul>
+        </td>
     </tr>
 </table>
+
+~~~~typescript
+//updateOn 예시
+this.loginForm = this.fb.group(
+  {
+    username: ["", [Validators.required]],
+    ...
+  },
+  {updateOn: "submit"}
+)
+~~~~
+
+## Form Validation Methods
+1. setValidators()
+  - 해당 formControl에 validator 할당하기
+
+~~~~typescript
+changeValidator(){
+  this.loginForm.controls['username'].setValidators(Validator.required);
+  this.loginForm.controls['username'].updateValueAndValidity(); //변경뒤 업데이트를 해주기 위해서 꼭 필요!
+}
+~~~~  
+
+/2. get() / getError()
+  - 해당 formControl의 child control를 리턴
+
+~~~~typescript
+getLoginDetails()){
+  this.loginForm.get('username')
+  this.loginForm.get('password')
+}
+~~~~  
+
+/3. clearValidators()
+  - 해당 formControl의 validators를 지움
+
+~~~~typescript
+clearValidator(){
+  this.loginForm.get('username').clearValidators();
+  this.loginForm.get('password').clearValidators();
+  this.loginForm.updateValueAndValidity(); //변경뒤 업데이트를 해주기 위해서 꼭 필요!
+}
+~~~~  
+
+/4. setValue()
+  - 해당 formControl의 value를 입력하줌
+
+~~~~typescript
+setValues(){
+  this.loginForm.setValue({
+    "username": "TJ",
+    "password": "12345678"
+  })
+}
+~~~~  
+
+/5. patchValue()
+  - 해당 formControl의 value를 입력하되 모든 value를 setValue()처럼 지정하지 않아도 됨
+
+~~~~typescript
+setPatchValue(){
+  this.loginForm.patchValue({
+    "username": "TJ" //전부 value를 할당 안하고 username만 할당해도 됨
+  })
+}
+~~~~  
+
+
+/6. reset()
+  - 해당 formControl의 value를 리셋함
+
+~~~~typescript
+onSubmit(){
+  if (this.loginForm.valid) {
+    console.log("Submited!")
+    this.loginForm.reset()
+  }
+}
+~~~~  
+
+
+/7. setErrors()
+  - 해당 formControl의 error를 직접 일으킴
+
+~~~~typescript
+setErrors(){
+  this.loginForm.get('username').setErrors({'server-connection-error':"true"})
+}
+~~~~  
+
+/8. hasError()
+  - 해당 FormControl 에 에러가 있는지 확인
+
+~~~~html
+<div *ngIf="username.hasError('required')">Username is required</div>
+~~~~  
+
 
 <br>
 
