@@ -28,9 +28,18 @@ layout: default
     </div>
   </header>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 col-md-10 mx-auto">
+  <div class="container-xxl align-items-center">
+    <div class="row justify-content-center">
+
+      {% include sidebar.html %}
+
+      {% if page.toc %}
+        {% include on-this-page.html%}
+        <div class="col-lg-6 order-2 col-md-9 col-sm-10 post-container">
+      {% else %}
+        <div class="col-lg-8 order-2 col-md-9 col-sm-10 mr-auto">
+      {% endif%}
+      
 
         {{ content }}
 

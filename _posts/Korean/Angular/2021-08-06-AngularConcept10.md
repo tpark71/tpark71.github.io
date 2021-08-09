@@ -5,10 +5,13 @@ subtitle: "[Angular Basic 10] Validation for Template-Driven and Reactive Forms"
 date: 2021-08-04
 # background: '/img/posts/03.jpg'
 categories:
-- ko
 - angular
 lang:
 - Korean
+- English
+tags:
+- ko
+permalink: ko/:categories/:title
 ---
 
 ## Validators

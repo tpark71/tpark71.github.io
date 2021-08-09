@@ -59,20 +59,12 @@
     font-family: inherit;
 }
 
-// pre {
-//     white-space: pre-wrap;
-//   }
-//   pre::before {
-//     counter-reset: listing;
-//   }
-//   code {
-//     counter-increment: listing;
-//   }
-//   code::before {
-//     content: counter(listing) ". ";
-//     display: inline-block;
-//     width: 8em;         /* now works */
-//     padding-left: auto; /* now works */
-//     margin-left: auto;  /* now works */
-//     text-align: right;  /* now works */
-//   }
+@media screen and (min-width:992px) {
+}
+
+@media screen and (min-width: 768px) and (max-width:992px) {
+    .post-container{
+        margin-left: auto !important;
+        padding-right: 2rem;
+    }
+}

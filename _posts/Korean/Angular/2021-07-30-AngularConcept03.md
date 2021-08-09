@@ -5,10 +5,13 @@ subtitle: "[Angular 03] Angular Data Binding으로 데이터 연동하기"
 date: 2021-07-30
 # background: '/img/posts/03.jpg'
 categories:
-- ko
 - angular
 lang:
 - Korean
+- English
+tags:
+- ko
+permalink: ko/:categories/:title
 ---
 
 ## Data Binding 이란
@@ -57,7 +60,7 @@ lang:
     </tr>
     <tr>
         <th scope="row">2-Way Data Binding</th>
-        <td><code>[(ngModel)}</code></td>
+        <td><code>[(ngModel)]</code></td>
         <td>DOM <-> Component</td>
         <td>DOM과 Component의 데이터가 연동 되어야 할때 사용</td>
     </tr>
@@ -86,7 +89,7 @@ Goal: 4 종류의 데이터 바이딩 만들어 보자!
 
 ![image](https://user-images.githubusercontent.com/44415731/127726048-7dfd8640-31de-4665-8418-4ead27c4039f.png){: width="100%" height="100%"}{: .align-center}  
 - Component의 html 파일을 연다 (src > app > my-first-component > my-first-component.component.html)
-- 사진과 같이 {{}} 안에 data라는 변수를 넣어준다.
+- 사진과 같이 {% raw %}{{}}{% endraw %} 안에 data라는 변수를 넣어준다.
 <br>
 
 <h6>Result</h6>

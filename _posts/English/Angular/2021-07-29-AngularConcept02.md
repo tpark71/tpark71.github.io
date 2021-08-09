@@ -5,11 +5,13 @@ subtitle: "Nothing to see here! This is for testing purposes!"
 date: 2021-07-29
 background: '/img/posts/03.jpg'
 categories:
-- en
 - angular
 lang:
 - English
 - Korean
+tags:
+- en
+permalink: en/:categories/:title
 ---
 
 ## Components
@@ -24,7 +26,7 @@ For example, if a component is a loginComponent, it will be responsible of displ
 3. Easy to integrate
 4. Easy to update and add components
 
-## Code Partice of Creating Components
+## Code Practice of Creating Components
 
 First, we will make new project named componentDemo.
 ~~~~

@@ -1,14 +1,19 @@
 ---
 layout: post
-title: "[Angular Concept 05] Angular Animation"
+title: "Angular Animation"
 subtitle: "Angular Animation를 통해 심플한 애니메이션을 구현해 보자!"
 date: 2021-07-31
 # background: '/img/posts/03.jpg'
 categories:
-- ko
 - angular
 lang:
 - Korean
+- English
+tags:
+- ko
+- angular
+- extra
+permalink: ko/:categories/:title
 ---
 
 ## Intro
