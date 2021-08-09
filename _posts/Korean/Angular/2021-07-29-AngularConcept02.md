@@ -90,8 +90,7 @@ $ ng g c my-first-component
 
 <h6>Step 6:</h6> Component를 브라우저에 띄우기
 
-![image](https://user-images.githubusercontent.com/44415731/127720983-6e117662-1115-483d-875b-185731f0a402.png)
-{: width="100%" height="100%"}{: .align-center}  
+![image](https://user-images.githubusercontent.com/44415731/127720983-6e117662-1115-483d-875b-185731f0a402.png){: width="100%" height="100%"}{: .align-center}  
 - src > app > app.component.html 안에 있는 모든 코드를 지우고 \<app-my-first-component>\</app-my-first-component>를 씁니다.
 - 다 저장한 후 terminal에서 아래 커멘트를 실행합니다.
 ~~~~
