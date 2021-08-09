@@ -1,0 +1,13 @@
+<link href="/assets/on-this-page.css" rel="stylesheet">
+
+<div class="col-lg-2 col-md-9 col-sm-10 toc order-3 text-muted">
+    <span class="fs-5 fw-semibold on-this-page-title">On This Page</span>
+    <hr>
+    <nav id="tableOfContents">
+        <ul>
+            {% for topic in page.toc %}
+            <li><a href="#{{ topic | downcase }}">{{topic | replace: '-', ' '}}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>

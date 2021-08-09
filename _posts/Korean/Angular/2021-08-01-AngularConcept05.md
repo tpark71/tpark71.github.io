@@ -5,10 +5,13 @@ subtitle: "[Angular 05] Angular Component Directives 노트와 Structural Direct
 date: 2021-08-01
 # background: '/img/posts/03.jpg'
 categories:
-- ko
 - angular
 lang:
 - Korean
+- English
+tags:
+- ko
+permalink: ko/:categories/:title
 ---
 
 ## Directives 이란

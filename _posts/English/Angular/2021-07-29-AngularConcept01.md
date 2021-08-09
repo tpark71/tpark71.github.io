@@ -5,7 +5,6 @@ subtitle: "Overview of Web-Application Development"
 date: 2021-07-27
 background: '/img/posts/03.jpg'
 categories:
-- en
 - testing
 lang:
 - English

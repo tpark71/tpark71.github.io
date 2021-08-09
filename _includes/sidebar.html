@@ -1,0 +1,42 @@
+<link href="/assets/sidebars.css" rel="stylesheet">
+
+<!-- <div class="flex-shrink-0 p-3 bg-white" style="width: 240px;"> -->
+<nav class="collapse col-lg-2 col-md-3 col-sm-10 order-1 mr-auto bg-white sidebar-display" id="navbarCategoryContent">
+    <!-- <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+      <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+      <span class="fs-5 fw-semibold">Categories</span>
+    </a> -->
+    {% assign categories = site.categories | sort %}
+    {% assign splitUrl = page.url | split: '/' %}
+    {% if splitUrl.size == 0 or splitUrl[1] == 'en' %}
+      {% assign language = "en" %}
+      {% assign posts = site.tags.en %}
+    {% else %}
+      {% assign langauge = "ko" %}
+      {% assign posts = site.tags.ko %}
+    {% endif %}
+
+    <span class="fs-5 fw-semibold" style="display: block; text-align: center">Categories</span>
+    <hr>
+    <ul class="list-unstyled ps-0">
+      {% for category in categories %}
+      {% assign filtered = posts | where: "categories", category[0] %}
+        {% if filtered.size != 0 %}
+        <li class="mb-1">
+          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#{{category[0]}}-collapse" aria-expanded="false">
+            
+            {{category[0]}} ({{filtered | size}})
+          </button>
+          <div class="collapse" id="{{category[0]}}-collapse">
+            <ol class="btn-toggle-nav list-unstyled fw-normal pb-1 childtext">
+                  {% for post in filtered %}
+                  <li><a href="{{post.url}}" class="link-dark rounded">{{post.title | remove: "Angular"}}</a></li>
+                  {% endfor %}
+              
+            </ol>
+          </div>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>

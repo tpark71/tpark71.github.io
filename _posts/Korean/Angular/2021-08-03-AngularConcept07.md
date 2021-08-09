@@ -5,10 +5,13 @@ subtitle: "[Angular Basic 07] Custom Directives 만들기"
 date: 2021-08-03
 # background: '/img/posts/03.jpg'
 categories:
-- ko
 - angular
 lang:
 - Korean
+- English
+tags:
+- ko
+permalink: ko/:categories/:title
 ---
 
 ## Intro

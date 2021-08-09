@@ -5,11 +5,17 @@ subtitle: "[Angular 02] Angular Components 개념 알아보고 만들기"
 date: 2021-07-29
 # background: '/img/posts/03.jpg'
 categories:
-- ko
 - angular
 lang:
 - Korean
 - English
+tags:
+- ko
+permalink: ko/:categories/:title
+toc:
+- Components-이란
+- 좋은-점
+- 코드-예시
 ---
 
 ## Components 이란

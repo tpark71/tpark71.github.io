@@ -1,8 +1,9 @@
 ---
 layout: home
 background: '/img/bg-index.jpg'
-subtitle: "TJ's Note Space"
+subtitle: "나만의 노트 공간"
 lang:
-- English
 - Korean
+- English
+permalink: "/ko"
 ---

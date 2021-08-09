@@ -1,0 +1,38 @@
+.toc {
+    order: 1;
+}
+
+.toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.toc a {
+    color: inherit;
+}
+
+@media screen and (min-width:992px) {
+    .toc{
+      display: block !important;
+      padding: 1rem;
+      position: sticky;
+      top: 5rem;
+      right: 0;
+      z-index: 2;
+      height: calc(100vh - 7rem);
+      overflow-y: auto;
+      order: 3;
+      margin-right: auto !important;
+    }
+    .on-this-page-title{
+        display: block;
+        text-align: center
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:992px) {
+    .toc{
+        margin-left: auto !important;
+    }
+}
+  

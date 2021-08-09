@@ -14,8 +14,8 @@ layout: default
         <div class="col-lg-9 col-md-9 mx-auto">
           <div class="page-heading">
             <h1>{{ site.title }}</h1>
-            {% if page.subtitle %}
-            <span class="subheading">{{ page.subtitle }}</span>
+            {% if site.description %}
+            <span class="subheading">{{ site.description }}</span>
             {% endif %}
           </div>
         </div>
@@ -23,26 +23,27 @@ layout: default
     </div>
   </header>
 
-  <div class="container-xl">
+  <div class="container">
     <div class="row">
 
       {% include sidebar.html %}
 
-      <div class="col-lg-9 order-2 col-md-9 col-sm-10 mx-auto">
+      <div class="col-lg-9 col-md-9 mx-auto">
 
         {{ content }}
 
         {% assign splitUrl = page.url | split: '/' %}
+        {{ splitUrl.size }}
 
         {% if splitUrl.size == 0 %}
-          {% assign posts = site.tags.en %}
+          <p>English Site</p>
         {% else %}
-          {% assign posts = site.tags.ko %}
+          <p>Korean Site</p>
         {% endif %}
 
 
         <!-- Home Post List -->
-        {% for post in posts limit : 7 %}
+        {% for post in site.posts limit : 5 %}
 
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
