@@ -62,9 +62,22 @@
 @media screen and (min-width:992px) {
 }
 
+@media screen and (max-width: 768px) {
+    .post-container-without-toc { 
+        margin-right: unset !important;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width:992px) {
     .post-container{
         margin-left: auto !important;
         padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-xxl { 
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
