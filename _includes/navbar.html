@@ -4,7 +4,7 @@
   <div class="container">
 
     {% assign splitUrl = page.url | split: '/' %}
-    {% if splitUrl.size == 0 %}
+    {% if splitUrl.size == 0 or splitUrl[1] == 'en' %}
       {% assign homeUrl = '/' %}
     {% else %}
       {% assign homeUrl = 'ko' %}

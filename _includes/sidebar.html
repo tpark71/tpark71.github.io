@@ -1,7 +1,7 @@
 <link href="/assets/sidebars.css" rel="stylesheet">
 
 <!-- <div class="flex-shrink-0 p-3 bg-white" style="width: 240px;"> -->
-<nav class="collapse col-lg-2 col-md-3 col-sm-10 order-1 mr-auto bg-white sidebar-display" id="navbarCategoryContent">
+<nav class="collapse sidebar-display" id="navbarCategoryContent">
     <!-- <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
       <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
       <span class="fs-5 fw-semibold">Categories</span>
@@ -16,8 +16,6 @@
       {% assign posts = site.tags.ko %}
     {% endif %}
 
-    <span class="fs-5 fw-semibold" style="display: block; text-align: center">Categories</span>
-    <hr>
     <ul class="list-unstyled ps-0">
       {% for category in categories %}
       {% assign filtered = posts | where: "categories", category[0] %}
@@ -39,4 +37,4 @@
         {% endif %}
       {% endfor %}
     </ul>
-  </nav>
+</nav>

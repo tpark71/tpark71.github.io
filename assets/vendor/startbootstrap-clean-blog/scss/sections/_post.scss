@@ -51,6 +51,11 @@
     }
 }
 
+#one{background-color:#9f9}
+#two{background-color:#f99}
+#three{background-color:#99f}
+#four{background-color:#555}
+
 .code-header {
     font-size:medium;
     padding-left: 1rem;
@@ -59,25 +64,68 @@
     font-family: inherit;
 }
 
-@media screen and (min-width:992px) {
+.post-categories {
+    grid-area: categories;
 }
 
-@media screen and (max-width: 768px) {
-    .post-container-without-toc { 
-        margin-right: unset !important;
+.post-toc {
+    grid-area: post-toc;
+}
+
+.post-details {
+    grid-area: post-details;
+}
+
+@media screen and (min-width:992px) {
+    .post-layout {
+        display: grid;
+        grid-template-columns: 1fr minmax(0, 5fr);
+        gap: 1rem;
+        grid-template-areas: "categories post-content";
+    }
+    .post-content {
+        display: grid;
+        grid-area: post-content;
+        grid-template-areas: "post-details post-toc";
+        grid-template-columns: minmax(0, 4fr) 1fr;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width:992px) {
-    .post-container{
-        margin-left: auto !important;
-        padding-right: 2rem;
+    .post-layout {
+        display: grid;
+        grid-template-columns: minmax(0,1fr) minmax(0, 5fr);
+        gap: 1rem;
+        grid-template-areas: "categories post-content";
+    }
+    .post-content {
+        display: grid;
+        grid-area: post-content;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "post-toc"
+            "post-details";
+        grid-template-rows: auto 1fr;
+        gap: inherit;
+            
     }
 }
 
 @media screen and (max-width: 768px) {
-    .container-xxl { 
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+    // .post-layout {
+    //     display: grid;
+    //     grid-template-columns: minmax(0,1fr) minmax(0, 5fr);
+    //     gap: 1rem;
+    //     grid-template-areas: "categories post-content";
+    // }
+    // .post-content {
+    //     display: grid;
+    //     grid-area: post-content;
+    //     grid-template-columns: minmax(0, 1fr);
+    //     grid-template-areas:
+    //         "post-toc"
+    //         "post-details";
+    //     grid-template-rows: auto 1fr;
+    //     gap: inherit;     
+    // }
 }

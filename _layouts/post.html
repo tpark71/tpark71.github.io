@@ -4,7 +4,10 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+<header
+  class="masthead"
+  style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')"
+>
   {% else %}
   <header class="masthead">
     {% endif %}
@@ -17,10 +20,14 @@ layout: default
             {% if page.subtitle %}
             <h2 class="subheading">{{ page.subtitle }}</h2>
             {% endif %}
-            <span class="meta">Posted by
-              <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-              on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
-              content=page.content %}
+            <span class="meta"
+              >Posted by
+              <a href="#"
+                >{% if page.author %}{{ page.author }}{% else %}{{ site.author
+                }}{% endif %}</a
+              >
+              on {{ page.date | date: '%B %d, %Y' }} &middot; {% include
+              read_time.html content=page.content %}
             </span>
           </div>
         </div>
@@ -28,20 +35,15 @@ layout: default
     </div>
   </header>
 
-  <div class="container-xxl align-items-center">
-    <div class="row justify-content-center">
+  <div class="container-xxl post-layout">
+    <div class="post-categories">{% include sidebar.html %}</div>
 
-      {% include sidebar.html %}
 
+    <div class="post-content">
       {% if page.toc %}
-        {% include on-this-page.html%}
-        <div class="col-lg-6 order-2 col-md-9 col-sm-10 post-container">
-      {% else %}
-        <div class="col-lg-8 order-2 col-md-9 col-sm-10 mr-auto post-container-without-toc">
-      {% endif%}
-      
-
-        {{ content }}
+      <div class="post-toc">{% include on-this-page.html%}</div>
+      {% endif %}
+      <div class="post-details">{{ content }}
 
         <hr>
 
@@ -60,4 +62,6 @@ layout: default
 
       </div>
     </div>
+    
   </div>
+</header>

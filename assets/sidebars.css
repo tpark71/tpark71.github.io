@@ -111,11 +111,10 @@ main {
   .sidebar-display{
     display: block !important;
     padding: 1rem;
-    padding-left: 3rem;
     position: sticky;
+    margin-left: -.25rem;
     height: calc(100vh - 7rem);
-    top: 5rem;
-    right: 0;
+    top: 3rem;
     z-index: 2;
     overflow-y: auto;
   }
@@ -126,8 +125,7 @@ main {
     display: block !important;
     padding: 1rem;
     position: sticky;
-    top: 5rem;
-    right: 0;
+    top: 3rem;
     z-index: 2;
     height: calc(100vh - 7rem);
     overflow-y: auto;
