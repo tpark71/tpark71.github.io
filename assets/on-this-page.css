@@ -16,13 +16,14 @@
       display: block !important;
       padding: 1rem;
       position: sticky;
-      top: 5rem;
+      top: 3rem;
       right: 0;
       z-index: 2;
       height: calc(100vh - 7rem);
       overflow-y: auto;
       order: 3;
       margin-right: auto !important;
+      text-align: right
     }
     .on-this-page-title{
         display: block;
